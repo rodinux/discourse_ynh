@@ -108,7 +108,7 @@ ynh_script_progression --message="Setting up Unicorn..."
 
 pushd "$install_dir"
     # Install bundler, a gems installer
-    ynh_gem install bundler
+    ynh_gem install bundler -v 2.4.22
     # Install without documentation
     echo "gem: --no-ri --no-rdoc" | ynh_exec_as "$app" tee "$install_dir/.gemrc" >/dev/null
 popd
